@@ -27,8 +27,9 @@ const Signup = () => {
       setLoading(false);
       if (data.success === false) {
         setError(true);
+        return;
       } else {
-        navigate('/sign-in');
+        navigate('/signin');
       }
     } catch (error) {
       setLoading(false);
@@ -72,7 +73,7 @@ const Signup = () => {
 
         <div className="mt-6 text-center">
           <p>Already have an account?</p>
-          <Link to="/sign-in">
+          <Link to="/signin">
             <span className="text-pink-500 font-semibold hover:underline">Sign In</span>
           </Link>
         </div>
